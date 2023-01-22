@@ -1,5 +1,6 @@
-import styles from './filterContact.module.css';
 import PropTypes from 'prop-types';
+import styles from "../FilterContact/filterContact.module.css";
+
 const FilterContact = ({ value, onChange }) => {
   return (
     <label className={styles.labelFilter}>
