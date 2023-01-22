@@ -4,7 +4,7 @@ import ContactList from "./ContastList/ContactList";
 import FilterContact from "./FilterContact/FilterContact";
 import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
-import styles from "./app.module.css";
+import styles from "../components/app.module.css";
 
 
 export class App extends Component {

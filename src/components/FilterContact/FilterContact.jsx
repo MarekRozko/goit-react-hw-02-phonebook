@@ -1,4 +1,4 @@
-import styles from "../FilterContact/filterContact.module.css"
+import styles from "../FilterContact/filterContact.module.css";
 import PropTypes from 'prop-types';
 const FilterContact = ({ value, onChange }) => {
   return (
