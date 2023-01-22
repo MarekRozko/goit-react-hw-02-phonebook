@@ -3,6 +3,7 @@ import GetContactForm from "../components/GetContactForm/GetContactForm"
 import ContactList from "./ContastList/ContactList";
 import FilterContact from "./FilterContact/FilterContact";
 import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
 import styles from "./app.module.css";
 
 
@@ -72,6 +73,19 @@ export class App extends Component {
   }
 }
 
-
+App.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ),
+  filter: PropTypes.string,
+  formSubmitHandler: PropTypes.func,
+  deleteContact: PropTypes.func,
+  changeFilter: PropTypes.func,
+  getFiltredContacts: PropTypes.func,
+};
 
 

@@ -2,14 +2,14 @@ import styles from "../ContastList/contactList.module.css"
 import PropTypes from 'prop-types';
 const ContactList = ({ contacts, onDeleteContact }) => {
   return (
-    <ul className={styles.list}>
-      {contacts.map(contact => {
+    <ul>
+      {contacts.map(({ id, name, number })=> {
         return (
-          <li className={styles.itemContact} key={contact.id}>
-            {contact.name}: {contact.number}
+          <li className={styles.itemContact} key={id}>
+            {name}: {number}
             <button className={styles.buttonItem}
               onClick={() => {
-                onDeleteContact(contact.id);
+                onDeleteContact(id);
               }}
             >
               Delete
@@ -23,7 +23,13 @@ const ContactList = ({ contacts, onDeleteContact }) => {
 
 export default ContactList;
 
-ContactList.propType = {
-    contacts: PropTypes.array.isRequired,
-    onDeleteContact: PropTypes.func.isRequired,
-}
+ContactList.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ),
+  onDeleteContact: PropTypes.func,
+};

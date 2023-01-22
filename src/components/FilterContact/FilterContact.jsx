@@ -2,9 +2,9 @@ import styles from "../FilterContact/filterContact.module.css"
 import PropTypes from 'prop-types';
 const FilterContact = ({ value, onChange }) => {
   return (
-    <label className={styles.label}>
+    <label className={styles.labelFilter}>
       Find contacts by name{' '}
-      <input className={styles.input} type="text" value={value} onChange={onChange} />
+      <input className={styles.inputFilter} type="text" value={value} onChange={onChange} />
     </label>
   );
 };
@@ -12,7 +12,7 @@ const FilterContact = ({ value, onChange }) => {
 export default FilterContact;
 
 FilterContact.propTypes = {
-    value: PropTypes.string.isRequired,
-    onChange : PropTypes.func.isRequired,
-}
+  value: PropTypes.string,
+  onChengeFilter: PropTypes.func,
+};
 

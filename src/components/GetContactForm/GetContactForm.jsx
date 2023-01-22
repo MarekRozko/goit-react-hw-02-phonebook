@@ -60,5 +60,10 @@ export default GetContactForm;
 
 
 GetContactForm.propTypes = {
-  contactSubmit: PropTypes.func.isRequired,
+  name: PropTypes.string,
+  number: PropTypes.string,
+  changeContact: PropTypes.func,
+  contactSubmit: PropTypes.func,
+  reset: PropTypes.func,
+  render: PropTypes.func,
 };
