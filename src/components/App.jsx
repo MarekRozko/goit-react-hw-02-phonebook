@@ -1,10 +1,10 @@
 import { Component } from "react";
-import GetContactForm from "../components/GetContactForm/GetContactForm"
+import { nanoid } from 'nanoid';
+import GetContactForm from "../components/GetContactForm/GetContactForm";
 import ContactList from "./ContastList/ContactList";
 import FilterContact from "./FilterContact/FilterContact";
-import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
-import styles from "../components/app.module.css";
+import styles from './app.module.css';
 
 
 export class App extends Component {
