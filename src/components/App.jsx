@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import styles from './app.module.css';
 
 
-export class App extends Component {
+ class App extends Component {
   state = {
     contacts: [
       { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
@@ -72,6 +72,8 @@ export class App extends Component {
     );
   }
 }
+
+export default App;
 
 App.propTypes = {
   contacts: PropTypes.arrayOf(
