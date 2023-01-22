@@ -4,7 +4,7 @@ import GetContactForm from "../components/GetContactForm/GetContactForm";
 import ContactList from "./ContastList/ContactList";
 import FilterContact from "./FilterContact/FilterContact";
 import PropTypes from 'prop-types';
-import styles from '../components/app.module.css';
+import styles from './app.module.css';
 
 
  class App extends Component {
